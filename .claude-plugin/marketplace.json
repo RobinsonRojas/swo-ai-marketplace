@@ -1,0 +1,23 @@
+{
+  "name": "swo-ai-marketplace",
+  "owner": {
+    "name": "Robinson Arley Rojas Novoa",
+    "email": "robison.rojas@softwareone.com"
+  },
+  "metadata": {
+    "description": "Marketplace de herramientas y habilidades de AI de SoftwareONE para Copilot",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "one-click-test-plugin",
+      "source": "./plugins/one-click-test-plugin",
+      "description": "Colección de habilidades para testing",
+      "version": "1.0.0",
+      "author": {
+        "name": "Robinson Arley Rojas Novoa",
+        "email": "robison.rojas@softwareone.com"
+      }
+    }
+  ]
+}
