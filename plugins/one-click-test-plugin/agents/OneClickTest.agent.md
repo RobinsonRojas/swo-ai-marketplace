@@ -1,7 +1,6 @@
 ---
 description: 'Agente de AI para Pruebas de Software como ingeniero de aseguramiento de calidad (QA) especializado en aplicaciones web.'
 name: '✨OneClickTest'
-model: 'Claude Sonnet 4.5'
 ---
 
 # Propósito
