@@ -1,1 +1,10 @@
-{}
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "tools": ["*"],
+      "type": "local",
+      "command": "npx",
+      "args": ["npx -y chrome-devtools-mcp@latest"]
+    }
+  }
+}
