@@ -53,11 +53,11 @@
         "AZURE_DEVOPS_PROJECT": "${AZURE_DEVOPS_PROJECT}"
       }
     },
-    "com.postman/postman-mcp-server": {
+    "postman-mcp": {
       "type": "local",
       "command": "npx",
       "tools": ["*"],
-      "args": ["@postman/postman-mcp-server@latest"],
+      "args": ["@postman/postman-mcp-server"],
       "env": {
         "POSTMAN_API_KEY": "${postman-api-key}"
       }
