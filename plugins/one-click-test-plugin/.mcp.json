@@ -1,9 +1,9 @@
 {
   "mcpServers": {
     "playwright-mcp": {
-      "tools": ["*"],
       "type": "local",
       "command": "npx",
+      "tools": ["*"],
       "args": ["@playwright/mcp@latest"]
     },
     "azure-devops-mcp": {
@@ -51,6 +51,15 @@
       ],
       "env": {
         "AZURE_DEVOPS_PROJECT": "${AZURE_DEVOPS_PROJECT}"
+      }
+    },
+    "com.postman/postman-mcp-server": {
+      "type": "local",
+      "command": "npx",
+      "tools": ["*"],
+      "args": ["@postman/postman-mcp-server@latest"],
+      "env": {
+        "POSTMAN_API_KEY": "${postman-api-key}"
       }
     }
   }
