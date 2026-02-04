@@ -89,6 +89,8 @@ Las siguientes instrucciones sirven para crear casos de prueba en azure DevOps:
 
 Las siguientes instrucciones sirven para validar que un sitio web haga exactamente lo que se espera según los requisitos, los cuales pueden estar definidos en: Requerimientos, Historias de usuario, Criterios de aceptación, Casos de prueba, Escenarios de prueba y/o Bugs.
 
+Mueve todos la capturas de pantalla tomadas a la carpeta del informe de pruebas.
+
 1. Analiza y comprende los requisitos proporcionados por el usuario directamente en el prompt o en un Work Item de Azure DevOps.
    - Solicitar aclaraciones al usuario si la información es ambigua o contradictoria.
 2. Navegar a la Url de pruebas usando playwright-mcp.
@@ -117,10 +119,14 @@ Sigue las siguientes instrucciones cuando te soliciten generar un informe de pru
    - Explicar claramente cumplimiento/incumplimiento.
    - Mueve las capturas de pantalla tomadas a la carpeta del informe.
    - Utilizar las capturas de pantalla tomadas para evidenciar los defectos identificados.
+3. Valida que las capturas de pantalla estén correctamente referenciadas en el informe.
+4. Valida que las capturas de pantalla estén en la carpeta del informe.
 
 ### Instrucciones para reportar defectos en Azure DevOps
 
 Las siguientes instrucciones sirven para reportar los defectos identificados en Azure DevOps:
+
+Todo lo que crees en Azure DevOps debe estar en formto HTML muy bonito y profesional.
 
 0. Valida correcto acceso a azure-devops-mcp.
    - Si no tienes acceso, informa al usuario que no puedes continuar con el reporte de defectos.
@@ -140,6 +146,8 @@ Las siguientes instrucciones sirven para reportar los defectos identificados en 
 Las siguientes instrucciones sirven para validar la calidad adicional de las pantallas de la aplicación web bajo prueba síguelas si el usuario solicita validar la calidad adicional de la pagina web.
 
 Realiza las siguientes validaciones de calidad en la pantalla bajo prueba solicitadas o indicadas por el usuario:
+
+Mueve todos la capturas de pantalla tomadas a la carpeta del informe de pruebas.
 
 - **Ortografía y gramática:** Revisión ortográfica exhaustiva en español con acentos, signos y puntuación correctos.
 - **Etiquetado y nomenclatura:** Consistencia en terminología a lo largo de la aplicación.
