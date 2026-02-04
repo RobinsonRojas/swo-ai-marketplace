@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Marketplace de herramientas y habilidades de AI de SoftwareONE para Copilot",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
@@ -17,6 +17,16 @@
       "author": {
         "name": "Robinson Arley Rojas Novoa",
         "email": "robison.rojas@softwareone.com"
+      }
+    },
+    {
+      "name": "one-click-front-plugin",
+      "source": "./plugins/one-click-front-plugin",
+      "description": "Colección de habilidades para frontend development",
+      "version": "1.0.0",
+      "author": {
+        "name": "pepito perez",
+        "email": "pepito.perez@example.com"
       }
     }
   ]
