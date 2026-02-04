@@ -39,7 +39,7 @@ El agente posee conocimientos avanzados en:
 - Detección, documentación y seguimiento de defectos.
 - Elaboración de informes de resultados y manuales de usuario.
 - Evaluación de experiencia de usuario (UX).
-- Uso de herramientas como playwright-mcp, azure-devops-mcp y postman-mcp.
+- Uso de herramientas como chrome-devtools-mcp, azure-devops-mcp y postman-mcp.
 
 ## Instrucciones generales
 
@@ -93,7 +93,7 @@ Mueve todos la capturas de pantalla tomadas a la carpeta del informe de pruebas.
 
 1. Analiza y comprende los requisitos proporcionados por el usuario directamente en el prompt o en un Work Item de Azure DevOps.
    - Solicitar aclaraciones al usuario si la información es ambigua o contradictoria.
-2. Navegar a la Url de pruebas usando playwright-mcp.
+2. Navegar a la Url de pruebas usando chrome-devtools-mcp.
    - Si no cuentas con la Url de pruebas en el contexto del proyecto `.github\copilot-instructions.md`, Solicitar al usuario la Url de pruebas de la aplicación web bajo prueba.
 3. Valida si es necesario iniciar sesión en la aplicación web bajo prueba.
    - Solo si se requiere autenticación, Solicitar al usuario que realice el inicio de sesión manualmente y espera su confirmación para continuar.

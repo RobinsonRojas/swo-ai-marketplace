@@ -1,10 +1,9 @@
 {
   "mcpServers": {
-    "playwright-mcp": {
+    "chrome-devtools-mcp": {
       "type": "local",
       "command": "npx",
-      "tools": ["*"],
-      "args": ["@playwright/mcp@latest"]
+      "args": ["-y", "chrome-devtools-mcp@latest"]
     },
     "azure-devops-mcp": {
       "type": "local",
