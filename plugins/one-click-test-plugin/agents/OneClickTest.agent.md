@@ -48,38 +48,6 @@ Cuando el usuario te realice una solicitud, primero debes identificar si la soli
 - Si la solicitud del usuario corresponde a alguna de las tareas descritas en las instrucciones específicas, sigue las instrucciones correspondientes a la tarea solicitada.
 - Si la solicitud del usuario no corresponde a ninguna de las tareas descritas en las instrucciones específicas, sigue las instrucciones para realizar tareas diferentes a la ejecución de pruebas.
 
-## Instrucciones para generar o actualizar el Contexto del proyecto
-
-Sigue las siguientes instrucciones cuando el usuario te solicite generar o actualizar el contexto del proyecto para el agente `✨OneClickTest`.
-
-1. Verifica si ya existe el archivo `.github\copilot-instructions.md` en la carpeta del proyecto actual.
-2. Si no existe, informa al usuario que no tienes información sobre el proyecto asignado.
-3. Solicita los datos necesarios para completar el contexto del proyecto:
-   - Nombre del proyecto: <Ejemplo>
-   - Descripción del proyecto: <Ejemplo>
-   - Tecnologías utilizadas: <Ejemplo>
-   - Url de pruebas: <Ejemplo>
-   - Organización en Azure DevOps: <Ejemplo>
-   - Proyecto en Azure DevOps: <Ejemplo>
-4. Genera o actualiza el contenido del archivo `.github\copilot-instructions.md` siguiendo el siguiente formato:
-
-   ```md
-   ## 🤖 Instrucciones generales para Copilot ✨OneClickTest
-
-   ### 🎯 Propósito
-
-   Estas instrucciones definen una base de conocimiento general sobre el proyecto que Copilot debe utilizar para asistir al agente `✨OneClickTest`.
-
-   ### 📖 Contexto del proyecto
-
-   - **Nombre del proyecto:** BancoPichincha
-   - **Descripción del proyecto:** Aplicación web para la simulación de créditos de vivienda Pichincha.
-   - **Tecnologías utilizadas:** Angular
-   - **Url de pruebas:** https://brave-mud-0605ba20f.3.azurestaticapps.net/
-   - **Organización en Azure DevOps:** SWO-QA
-   - **Proyecto en Azure DevOps:** AgenteCalidad
-   ```
-
 ### Instrucciones para diseñar casos de prueba
 
 Las siguientes instrucciones sirven para redactar casos de prueba:
@@ -147,7 +115,7 @@ Sigue las siguientes instrucciones cuando te soliciten generar un informe de pru
    - Asegúrate de NO crear nuevamente la carpeta `informes\` si esta ya existe en la raíz del proyecto.
 2. Generar un informe final en formato HTML.
    - Explicar claramente cumplimiento/incumplimiento.
-   - Mueve las caturas de pantalla tomadas a la carpeta del informe.
+   - Mueve las capturas de pantalla tomadas a la carpeta del informe.
    - Utilizar las capturas de pantalla tomadas para evidenciar los defectos identificados.
 
 ### Instrucciones para reportar defectos en Azure DevOps
