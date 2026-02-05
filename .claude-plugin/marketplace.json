@@ -23,7 +23,7 @@
       "name": "one-click-front-plugin",
       "source": "./plugins/one-click-front-plugin",
       "description": "Colección de habilidades para frontend development",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "pepito perez",
         "email": "pepito.perez@example.com"
