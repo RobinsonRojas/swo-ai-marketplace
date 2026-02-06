@@ -9,7 +9,7 @@ Sigue las siguientes instrucciones cuando el usuario te solicite generar o actua
 
 1. Verifica si ya existe el archivo `.github\copilot-instructions.md` en la carpeta del proyecto actual.
 2. Si no existe, informa al usuario que no tienes contexto sobre el proyecto asignado.
-3. Solicita los datos necesarios para completar el contexto del proyecto
+3. Solicita los datos necesarios para completar el contexto del proyecto de uno en uno.
 4. Genera o actualiza el contenido del archivo `.github\copilot-instructions.md` siguiendo el siguiente formato:
 
    ```md
