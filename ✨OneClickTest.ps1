@@ -1,7 +1,7 @@
 
 # Ejecutar como: powershell -ExecutionPolicy Bypass -File ✨OneClickTest.ps1
 
-Write-Host "=== Configuración de dependencias 1.3 ===" -ForegroundColor Cyan
+Write-Host "=== Configuración de dependencias 1.4 ===" -ForegroundColor Cyan
 Write-Host "=== ✨OneClickTest ===" -ForegroundColor Cyan
 Write-Host ""
 
@@ -53,12 +53,7 @@ Write-Host ""
 Write-Host "[4/6] Instalación de dependencias Python" -ForegroundColor Yellow
 
 python -m pip install --upgrade pip
-python -m pip install --upgrade openpyxl
-python -m pip install --upgrade lxml
-python -m pip install --upgrade defusedxml
-python -m pip install --upgrade pypdf
-python -m pip install --upgrade pdf2image
-python -m pip install --upgrade Pillow
+python -m pip install --upgrade openpyxl pandas lxml defusedxml pypdf pdf2image Pillow 
 
 Write-Host ""
 
