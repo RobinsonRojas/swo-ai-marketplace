@@ -105,7 +105,7 @@ Mueve todos la capturas de pantalla tomadas a la carpeta del informe de pruebas.
    - Reportar como defecto cualquier discrepancia, por mínima que sea.
 6. Evidenciar los defectos encontrados tomando capturas de pantalla.
    - No tomes capturas de pantalla de los pasos correctos. A menos que el usuario lo solicite explícitamente.
-   - Toma captura de pantalla y resalta en color anaranjado cada defecto encontrado, modificando el CSS, y sin modificar el viewport ni hacer zoom.
+   - Toma captura de pantalla de los defecto identificados, modificando el CSS, y sin modificar el viewport ni hacer zoom.
    - Luego de tomat la captura de pantalla, mueve la imagen a la carpeta del informe de pruebas.
    - Luego de tomar la captura de pantalla, elimina las modificaciones del CSS para evitar que las capturas de pantalla siguientes se vean afectadas.
 7. Genera un informe de pruebas local siguiendo las instrucciones para generar un informe de pruebas.
