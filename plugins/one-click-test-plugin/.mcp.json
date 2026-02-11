@@ -1,5 +1,10 @@
 {
   "mcpServers": {
+    "playwright-mcp": {
+      "type": "local",
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--allow-unrestricted-file-access"]
+    },
     "chrome-devtools-mcp": {
       "type": "local",
       "command": "npx",
