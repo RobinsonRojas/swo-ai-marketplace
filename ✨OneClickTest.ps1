@@ -113,6 +113,7 @@ Write-Host "`n"
 
 # Start copilot 
 copilot --agent=one-click-test-plugin/OneClickTest --yolo --banner --disable-builtin-mcps
+# copilot --agent=one-click-test-plugin/OneClickTest --yolo --banner --disable-builtin-mcps -i "/rename ✨OneClickTest"
 
 # Mantener la terminal abierta
 Write-Host "`nPresiona Enter para cerrar..." -ForegroundColor Gray
