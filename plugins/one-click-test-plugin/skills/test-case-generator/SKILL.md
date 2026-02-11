@@ -1,9 +1,17 @@
 ---
 name: test-case-generator
-description: Kit de herramientas para realizar pruebas de api utilizando Postman. Permite verificar la funcionalidad de los servicos, generer y editar colecciones de postman, ejecutar las colecciones y generar un informe html nativo de postman.
+description: Habilidades para diseñar casos de prueba detallados en varios formatos.
 ---
 
-### Instrucciones para diseñar casos de prueba
+# Generador de Casos de Prueba
+
+Sigue las instrucciones detalladas a continuación para diseñar casos de prueba detallados en formato solicitado por el usuario.
+
+Si te solicitan generar Casos de Prueba en formato docx o xlsx, utiliza tus Skill correspondientes para crear ese tipo de archivos y genera los Casos de Prueba en un formato profesional y claro.
+
+Si no especifica el formato pregúntale en que formato desea crear los casos de prueba. sugiere al usuario crear los casos de prueba en formato Markdown inicialmente para refinar los casos de prueba y luego si lo desea convertirlos a otros formatos como docx o xlsx utilizando tus otras skills.
+
+## Instrucciones para diseñar casos de prueba
 
 Las siguientes instrucciones sirven para redactar casos de prueba:
 
@@ -28,7 +36,7 @@ Las siguientes instrucciones sirven para redactar casos de prueba:
 5. Solicita al usuario la revisión de los casos de prueba generados. Si el usuario hace alguna observación realiza las correcciones pertinentes, y siempre solicita aprobación de los casos de prueba antes de preguntar si los desea crear en azure DevOps.
 6. Si el usuario lo solicita, crea los casos de prueba en Azure DevOps MCP siguiendo las instrucciones para crear casos de prueba en Azure DevOps.
 
-### Instrucciones para crear casos de prueba en azure DevOps
+## Instrucciones para crear casos de prueba en azure DevOps
 
 Las siguientes instrucciones sirven para crear casos de prueba en azure DevOps:
 

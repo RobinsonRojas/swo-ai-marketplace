@@ -1,36 +1,43 @@
 ---
 name: report-generator
-description: Kit de herramientas para realizar pruebas de api utilizando Postman. Permite verificar la funcionalidad de los servicos, generer y editar colecciones de postman, ejecutar las colecciones y generar un informe html nativo de postman.
+description: Habilidad para generar informes y reportar defectos de las pruebas realizadas
 ---
 
-### Instrucciones para generar un informe de pruebas local
+# Generador de Informes de Pruebas
+
+Sigue las instrucciones detalladas a continuación para generar informes de pruebas en formato HTML y reportar defectos en Azure DevOps de manera efectiva y profesional.
+
+Solo si te solicitan explícitamente generar un informe en formato docx o xlsx, utiliza tus Skill correspondientes para crear ese tipo de archivos y genera un informe profesional de las pruebas realizadas. en caso contrario sigue las instrucciones para generar un informe de pruebas en formato HTML y reportar defectos en Azure DevOps.
+
+## Instrucciones para generar un informe de pruebas en HTML
 
 Sigue las siguientes instrucciones cuando te soliciten generar un informe de pruebas en formato HTML:
 
-1. Crear una carpeta en la ruta absoluta completa `informes\<NombreInforme>` para almacenar el informe de la prueba.
-   - Asegúrate de NO crear nuevamente la carpeta `informes\` si esta ya existe en la raíz del proyecto.
-2. Generar un informe final en formato HTML.
-   - Explicar claramente cumplimiento/incumplimiento.
-   - Mueve las capturas de pantalla tomadas a la carpeta del informe.
-   - Utilizar las capturas de pantalla tomadas para evidenciar los defectos identificados.
+1. Valida que ya exista la carpeta `informes\<NombreInforme>` en la raíz del proyecto.
+   - Si no existe, crea la carpeta `informes\<NombreInforme>` en la raíz del proyecto.
+   - Con las capturas de pantalla tomadas durante la prueba.
+2. Genera un informe final en formato HTML utilizando la plantilla proporcionada como ejemplo:
+   - **examples/** - (`plantilla_informe.html`) - Plantilla de informe de pruebas en HTML con estilos profesionales.
+   - Puedes editar la plantilla para adaptarla a tus necesidades, pero asegúrate de mantener un formato profesional y claro.
 3. Valida que las capturas de pantalla estén correctamente referenciadas en el informe.
-4. Valida que las capturas de pantalla estén en la carpeta del informe.
+4. Guarda el archivo del informe en la ruta absoluta completa `informes\<NombreInforme>\informe_pruebas.html`.
+   - Informa al usuario sobre la ubicación del archivo generado.
+   - Abre el informe generado.
 
-### Instrucciones para reportar defectos en Azure DevOps
+## Instrucciones para reportar defectos en Azure DevOps
 
 Las siguientes instrucciones sirven para reportar los defectos identificados en Azure DevOps:
 
-Todo lo que crees en Azure DevOps debe estar en formto HTML muy bonito y profesional.
+Todo lo que crees en Azure DevOps debe estar en formato HTML muy bonito y profesional.
 
-0. Valida correcto acceso a azure-devops-mcp.
-   - Si no tienes acceso, informa al usuario que no puedes continuar con el reporte de defectos.
-1. Ten conocimiento del Work Item original donde se encuentran las especificaciones del requerimiento a probar (criterios de aceptación, casos de prueba y/o Detalle de un Bug).
+1. Ten conocimiento del Work Item original donde se encuentran las especificaciones del requerimiento a probar (USER STORY, BUG, ISSUE).
    - Si no tienes conocimiento del Work Item original, solicita al usuario el ID del Work Item.
 2. Pregunta al usuario cual de la siguiente acciones desea realizar o ambas:
    - Comentar en el Work Item original con un resumen del resultado de la prueba.
    - Crear Work Items tipo BUG/ISSUE con los defectos identificados, vinculado al Work Item original.
-3. Verifica los campos requeridos para la creación de un work item de tipo bug.
-4. Si aplica, Comenta en el Work Item original un resumen del resultado de la prueba de forma muy bonita.
+3. Verifica los campos requeridos para la creación de un work item de tipo BUG.
+4. Si aplica, Comenta en el Work Item original un resumen de las pruebas.
    - No crear tags.
-5. Si aplica, Crea Work Items tipo BUG/ISSUE con los defectos identificados de forma muy bonita, vinculado al Work Item original.
+5. Si aplica, Crea Work Items tipo BUG/ISSUE con los defectos identificados.
+   - Add link del Work Item original.
    - No crear tags.

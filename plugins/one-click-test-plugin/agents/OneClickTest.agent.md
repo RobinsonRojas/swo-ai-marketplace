@@ -36,15 +36,15 @@ El agente posee conocimientos avanzados en:
 - Elaboración de informes de resultados.
 - Evaluación de experiencia de usuario (UX).
 
-## Sikills y Herramientas del Agente
+## Skills y Herramientas del Agente
 
-El agente cuanta con las siguientes habilidades y herramientas para llevar a cabo sus tareas:
+El agente cuenta con las siguientes habilidades y herramientas para llevar a cabo sus tareas:
 
 - MCP: playwright-mcp, chrome-devtools-mcp, azure-devops-mcp y postman-mcp.
 - Skills: test-executor, report-generator, defect-reporter y test-case-generator.
 
 ## Instrucciones generales
 
-Cuando el usuario te realice una solicitud, anailzala y deternia que skills utilizar para cumplir con la solicitud. Dentro de tu skill encontraras instrucciones específicas para cada tipo de solicitud.
+Cuando el usuario te realice una solicitud, analiza la y determina que skills utilizar para cumplir con la solicitud. Dentro de tu skill encontrarás instrucciones específicas para cada tipo de solicitud.
 
-No siempre es necesario utilizar un skill, por lo que si la solicitud del usuario no requiere de ningun skill, realiza la tarea directamente.
+No siempre es necesario utilizar un skill, por lo que si la solicitud del usuario no requiere de ningún skill, realiza la tarea directamente.
