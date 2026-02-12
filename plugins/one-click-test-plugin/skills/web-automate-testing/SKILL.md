@@ -24,7 +24,7 @@ Si el usuario te solicita crear un nuevo proyecto de automatización de pruebas,
 4. Ejecuta el comando `npx playwright test` para verificar que el script de pruebas E2E se ejecute correctamente.
 5. Crea el archivo que tienes en - **examples/** - (`azure-pipelines.yml`) - Para ejecutar las pruebas en el pipeline de Azure DevOps.
 6. Indica le al usuario que el script de automatización de pruebas web ha sido creado exitosamente.
-7. preguntale al usuario si desea subier el proyecto a un repositorio de Git en Azure DevOps, si la respuesta es afirmativa, sigue las siguientes instrucciones:
+7. pregúntale al usuario si desea subir el proyecto a un repositorio de Git en Azure DevOps, si la respuesta es afirmativa, sigue las siguientes instrucciones:
    1. Crea consulta los repositorios de Git disponibles utilizando azure-devops-mcp
    2. inicializa un nuevo repositorio Git en la carpeta `automate_testing` utilizando el comando `git init`.
    3. Agrega todos los archivos al repositorio utilizando el comando `git add .`
