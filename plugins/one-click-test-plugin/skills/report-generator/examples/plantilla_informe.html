@@ -106,38 +106,68 @@
       .header .agent-badge {
         display: inline-block;
         background: rgba(255, 255, 255, 0.2);
-        padding: 8px 16px;
+        padding: 10px 20px;
         border-radius: 20px;
         margin-top: 12px;
-        font-size: 0.9em;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: var(--color-primary);
         backdrop-filter: blur(10px);
       }
 
       /* ==================== METADATA ==================== */
       .metadata {
-        background: var(--color-light);
-        padding: 25px 40px;
-        border-bottom: 3px solid #e9ecef;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 30px 40px;
+        border-bottom: none;
+        box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.05);
       }
 
       .metadata-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        gap: 15px;
       }
 
       .metadata-item {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
+        background: white;
+        padding: 15px 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .metadata-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
       .metadata-item .icon {
-        font-size: 1.3em;
+        font-size: 1.5em;
+        background: var(--color-light);
+        padding: 10px;
+        border-radius: 10px;
       }
 
       .metadata-item strong {
-        color: var(--color-primary);
+        color: var(--color-dark);
+        font-size: 0.75em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: block;
+        margin-bottom: 4px;
+        opacity: 0.7;
+      }
+
+      .metadata-item div span {
+        color: var(--color-dark);
+        font-weight: 600;
+        font-size: 1em;
       }
 
       /* ==================== CONTENIDO ==================== */
@@ -535,7 +565,12 @@
           <div class="header-text">
             <h1>Informe de Pruebas</h1>
             <div class="work-item">{{TITULO_HU}}</div>
-            <span class="agent-badge">Ejecutado por: ✨OneClickTest</span>
+            <span class="agent-badge"
+              ><span style="color: white; font-weight: bold"
+                >Ejecutado por:</span
+              >
+              ✨OneClickTest</span
+            >
           </div>
         </div>
       </div>
@@ -545,23 +580,31 @@
         <div class="metadata-grid">
           <div class="metadata-item">
             <span class="icon">📅</span>
-            <strong>Fecha:</strong>
-            <span>{{FECHA_EJECUCION}}</span>
+            <div>
+              <strong>Fecha</strong>
+              <span>{{FECHA_EJECUCION}}</span>
+            </div>
           </div>
           <div class="metadata-item">
             <span class="icon">🏢</span>
-            <strong>Proyecto:</strong>
-            <span>{{NOMBRE_PROYECTO}}</span>
+            <div>
+              <strong>Proyecto</strong>
+              <span>{{NOMBRE_PROYECTO}}</span>
+            </div>
           </div>
           <div class="metadata-item">
             <span class="icon">🔗</span>
-            <strong>Work Item:</strong>
-            <span>#{{WORK_ITEM_ID}}</span>
+            <div>
+              <strong>Work Item</strong>
+              <span>#{{WORK_ITEM_ID}}</span>
+            </div>
           </div>
           <div class="metadata-item">
             <span class="icon">🌐</span>
-            <strong>URL:</strong>
-            <span>{{URL_APLICACION}}</span>
+            <div>
+              <strong>URL</strong>
+              <span>{{URL_APLICACION}}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -575,23 +618,29 @@
             <div class="summary-grid">
               <div class="summary-item">
                 <span class="number">{{TOTAL_CASOS}}</span>
-                <span class="label">Total Casos</span>
+                <span class="label">Total Pruebas</span>
               </div>
               <div class="summary-item">
                 <span class="number">{{CASOS_EXITOSOS}}</span>
-                <span class="label">Exitosos</span>
+                <span class="label">✓ Exitosas</span>
               </div>
-              <div class="summary-item">
-                <span class="number">{{CASOS_FALLIDOS}}</span>
-                <span class="label">Fallidos</span>
+            </div>
+
+            <h4 style="margin: 25px 0 15px 0; opacity: 0.9; font-size: 1em">
+              🐛 Defectos por Severidad
+            </h4>
+            <div class="summary-grid">
+              <div class="summary-item" style="border-left: 4px solid #dc3545">
+                <span class="number">{{DEFECTOS_ALTOS}}</span>
+                <span class="label">🔴 Altos</span>
               </div>
-              <div class="summary-item">
-                <span class="number">{{DEFECTOS_ENCONTRADOS}}</span>
-                <span class="label">Defectos</span>
+              <div class="summary-item" style="border-left: 4px solid #ffc107">
+                <span class="number">{{DEFECTOS_MEDIOS}}</span>
+                <span class="label">🟠 Medios</span>
               </div>
-              <div class="summary-item">
-                <span class="number">{{TASA_EXITO}}%</span>
-                <span class="label">Tasa de Éxito</span>
+              <div class="summary-item" style="border-left: 4px solid #17a2b8">
+                <span class="number">{{DEFECTOS_BAJOS}}</span>
+                <span class="label">🔵 Bajos</span>
               </div>
             </div>
           </div>
@@ -615,95 +664,142 @@
         <div class="section">
           <h2 class="section-title">🐛 Defectos Encontrados</h2>
 
-          <!-- DEFECTO 1 -->
+          <!-- DEFECTO SEVERIDAD ALTA -->
           <div class="test-caso failed">
             <div class="test-caso-header">
-              <h3 class="test-caso-title">🔴 {{TITULO_DEFECTO}}</h3>
-              <span class="severity-critical">CRÍTICO</span>
+              <h3 class="test-caso-title">🔴 {{TITULO_DEFECTO_ALTO}}</h3>
+              <span class="severity-high">ALTO</span>
               <span class="badge danger">✗ NO APROBADO</span>
             </div>
 
             <div class="defecto-box">
               <div class="defecto-details">
                 <strong>Ubicación:</strong>
-                {{UBICACION_DEFECTO}}
+                {{UBICACION_DEFECTO_ALTO}}
               </div>
 
               <div class="defecto-details">
                 <strong>Descripción:</strong>
-                {{DESCRIPCION_DEFECTO}}
+                {{DESCRIPCION_DEFECTO_ALTO}}
               </div>
 
               <div class="defecto-details">
                 <strong>Comportamiento Esperado:</strong>
-                {{COMPORTAMIENTO_ESPERADO}}
+                {{COMPORTAMIENTO_ESPERADO_ALTO}}
               </div>
 
               <div class="defecto-details">
                 <strong>Comportamiento Encontrado:</strong>
-                {{COMPORTAMIENTO_ENCONTRADO}}
+                {{COMPORTAMIENTO_ENCONTRADO_ALTO}}
               </div>
 
               <div class="defecto-details">
                 <strong>Impacto:</strong>
-                {{IMPACTO_DEFECTO}}
+                {{IMPACTO_DEFECTO_ALTO}}
               </div>
 
               <div class="defecto-details">
                 <strong>📸 Evidencia:</strong>
                 <div class="screenshot">
                   <img
-                    src="{{SCREENSHOT_DEFECTO}}"
+                    src="{{SCREENSHOT_DEFECTO_ALTO}}"
                     alt="Evidencia del defecto"
                   />
-                  <p class="screenshot-caption">{{CAPTION_SCREENSHOT}}</p>
+                  <p class="screenshot-caption">{{CAPTION_SCREENSHOT_ALTO}}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- DEFECTO 2 -->
+          <!-- DEFECTO SEVERIDAD MEDIA -->
           <div class="test-caso failed">
             <div class="test-caso-header">
-              <h3 class="test-caso-title">🟠 {{TITULO_DEFECTO_2}}</h3>
+              <h3 class="test-caso-title">🟠 {{TITULO_DEFECTO_MEDIO}}</h3>
               <span class="severity-medium">MEDIO</span>
-              <span class="badge danger">✗ NO APROBADO</span>
+              <span class="badge warning">⚠ OBSERVADO</span>
             </div>
 
             <div class="defecto-box">
               <div class="defecto-details">
                 <strong>Ubicación:</strong>
-                {{UBICACION_DEFECTO_2}}
+                {{UBICACION_DEFECTO_MEDIO}}
               </div>
 
               <div class="defecto-details">
                 <strong>Descripción:</strong>
-                {{DESCRIPCION_DEFECTO_2}}
+                {{DESCRIPCION_DEFECTO_MEDIO}}
               </div>
 
               <div class="defecto-details">
                 <strong>Comportamiento Esperado:</strong>
-                {{COMPORTAMIENTO_ESPERADO_2}}
+                {{COMPORTAMIENTO_ESPERADO_MEDIO}}
               </div>
 
               <div class="defecto-details">
                 <strong>Comportamiento Encontrado:</strong>
-                {{COMPORTAMIENTO_ENCONTRADO_2}}
+                {{COMPORTAMIENTO_ENCONTRADO_MEDIO}}
               </div>
 
               <div class="defecto-details">
                 <strong>Impacto:</strong>
-                {{IMPACTO_DEFECTO_2}}
+                {{IMPACTO_DEFECTO_MEDIO}}
               </div>
 
               <div class="defecto-details">
                 <strong>📸 Evidencia:</strong>
                 <div class="screenshot">
                   <img
-                    src="{{SCREENSHOT_DEFECTO_2}}"
-                    alt="Evidencia del defecto 2"
+                    src="{{SCREENSHOT_DEFECTO_MEDIO}}"
+                    alt="Evidencia del defecto"
                   />
-                  <p class="screenshot-caption">{{CAPTION_SCREENSHOT_2}}</p>
+                  <p class="screenshot-caption">{{CAPTION_SCREENSHOT_MEDIO}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DEFECTO SEVERIDAD BAJA -->
+          <div class="test-caso failed">
+            <div class="test-caso-header">
+              <h3 class="test-caso-title">🔵 {{TITULO_DEFECTO_BAJO}}</h3>
+              <span class="severity-low">BAJO</span>
+              <span class="badge info">ℹ INFORMATIVO</span>
+            </div>
+
+            <div class="defecto-box">
+              <div class="defecto-details">
+                <strong>Ubicación:</strong>
+                {{UBICACION_DEFECTO_BAJO}}
+              </div>
+
+              <div class="defecto-details">
+                <strong>Descripción:</strong>
+                {{DESCRIPCION_DEFECTO_BAJO}}
+              </div>
+
+              <div class="defecto-details">
+                <strong>Comportamiento Esperado:</strong>
+                {{COMPORTAMIENTO_ESPERADO_BAJO}}
+              </div>
+
+              <div class="defecto-details">
+                <strong>Comportamiento Encontrado:</strong>
+                {{COMPORTAMIENTO_ENCONTRADO_BAJO}}
+              </div>
+
+              <div class="defecto-details">
+                <strong>Impacto:</strong>
+                {{IMPACTO_DEFECTO_BAJO}}
+              </div>
+
+              <div class="defecto-details">
+                <strong>📸 Evidencia:</strong>
+                <div class="screenshot">
+                  <img
+                    src="{{SCREENSHOT_DEFECTO_BAJO}}"
+                    alt="Evidencia del defecto"
+                  />
+                  <p class="screenshot-caption">{{CAPTION_SCREENSHOT_BAJO}}</p>
                 </div>
               </div>
             </div>
