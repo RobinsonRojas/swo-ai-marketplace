@@ -33,11 +33,12 @@ Todo lo que crees en Azure DevOps debe estar en formato HTML muy bonito y profes
 1. Ten conocimiento del Work Item original donde se encuentran las especificaciones del requerimiento a probar (USER STORY, BUG, ISSUE).
    - Si no tienes conocimiento del Work Item original, solicita al usuario el ID del Work Item.
 2. Pregunta al usuario cual de la siguiente acciones desea realizar o ambas:
-   - Comentar en el Work Item original con un resumen del resultado de la prueba.
+   - Comentar en el Work Item original con un resumen del resultado de la prueba en un formato muy bonito y profesional.
    - Crear Work Items tipo BUG/ISSUE con los defectos identificados, vinculado al Work Item original.
-3. Verifica los campos requeridos para la creación de un work item de tipo BUG.
-4. Si aplica, Comenta en el Work Item original un resumen de las pruebas.
+3. Si aplica, Comenta en el Work Item original un resumen de las pruebas.
    - No crear tags.
-5. Si aplica, Crea Work Items tipo BUG/ISSUE con los defectos identificados.
+4. Si aplica, Crea Work Items tipo BUG/ISSUE con los defectos identificados.
+   - Verifica los campos requeridos para la creación de un work item de tipo BUG por lo general son (Repro, StepsDescription).
+   - Rellena los campos requeridos con la información del defecto identificado en un formato muy bonito y profesional.
    - Add link del Work Item original.
    - No crear tags.
