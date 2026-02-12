@@ -53,7 +53,7 @@ Write-Host ""
 Write-Host "[4/6] Instalación de dependencias Python" -ForegroundColor Yellow
 
 python -m pip install --upgrade pip
-python -m pip install --upgrade openpyxl pandas lxml defusedxml pypdf pdf2image Pillow 
+python -m pip install --upgrade openpyxl pandas lxml defusedxml weasyprint pypdf playwright pdf2image Pillow 
 
 Write-Host ""
 
