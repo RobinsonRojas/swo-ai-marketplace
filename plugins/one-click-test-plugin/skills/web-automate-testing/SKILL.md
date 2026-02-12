@@ -1,6 +1,6 @@
 ---
 name: web-automate-testing
-description: Habilidad para crear o actualizar scripts de automatización de pruebas web utilizando Playwright.
+description: Habilidad para crear o actualizar proyectos de automatización E2E de pruebas web utilizando Playwright.
 ---
 
 # Web automate testing

@@ -82,33 +82,49 @@ Write-Host ""
 Set-Location $PSScriptRoot
 
 Clear-Host
+
+# Colores ANSI - #BC3FBC = RGB(188, 63, 188)
+$esc = [char]27
+$purple = "$esc[38;2;188;63;188m"
+$yellow = "$esc[33m"
+$cyan = "$esc[36m"
+$green = "$esc[32m"
+$reset = "$esc[0m"
+
+# Calcular padding para centrar (ancho del arte = 48 caracteres)
+$artWidth = 48
+$termWidth = $Host.UI.RawUI.WindowSize.Width
+$pad = [Math]::Max(0, [Math]::Floor(($termWidth - $artWidth) / 2))
+$p = " " * $pad
+
 Write-Host "`n"
-Write-Host "   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" -ForegroundColor Magenta
-Write-Host "   ┃                                            ┃" -ForegroundColor Magenta
-Write-Host "   ┃   ✨  ██████╗ ███╗   ██╗███████╗           ┃" -ForegroundColor Yellow
-Write-Host "   ┃      ██╔═══██╗████╗  ██║██╔════╝           ┃" -ForegroundColor Yellow
-Write-Host "   ┃      ██║   ██║██╔██╗ ██║█████╗             ┃" -ForegroundColor Yellow
-Write-Host "   ┃      ██║   ██║██║╚██╗██║██╔══╝             ┃" -ForegroundColor Yellow
-Write-Host "   ┃      ╚██████╔╝██║ ╚████║███████╗           ┃" -ForegroundColor Yellow
-Write-Host "   ┃       ╚═════╝ ╚═╝  ╚═══╝╚══════╝           ┃" -ForegroundColor Yellow
-Write-Host "   ┃                                            ┃" -ForegroundColor Magenta
-Write-Host "   ┃    ██████╗██╗     ██╗ ██████╗██╗  ██╗      ┃" -ForegroundColor Cyan
-Write-Host "   ┃   ██╔════╝██║     ██║██╔════╝██║ ██╔╝      ┃" -ForegroundColor Cyan
-Write-Host "   ┃   ██║     ██║     ██║██║     █████╔╝       ┃" -ForegroundColor Cyan
-Write-Host "   ┃   ██║     ██║     ██║██║     ██╔═██╗       ┃" -ForegroundColor Cyan
-Write-Host "   ┃   ╚██████╗███████╗██║╚██████╗██║  ██╗      ┃" -ForegroundColor Cyan
-Write-Host "   ┃    ╚═════╝╚══════╝╚═╝ ╚═════╝╚═╝  ╚═╝      ┃" -ForegroundColor Cyan
-Write-Host "   ┃                                            ┃" -ForegroundColor Magenta
-Write-Host "   ┃   ████████╗███████╗███████╗████████╗  ⚡   ┃" -ForegroundColor Green
-Write-Host "   ┃   ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝       ┃" -ForegroundColor Green
-Write-Host "   ┃      ██║   █████╗  ███████╗   ██║          ┃" -ForegroundColor Green
-Write-Host "   ┃      ██║   ██╔══╝  ╚════██║   ██║          ┃" -ForegroundColor Green
-Write-Host "   ┃      ██║   ███████╗███████║   ██║          ┃" -ForegroundColor Green
-Write-Host "   ┃      ╚═╝   ╚══════╝╚══════╝   ╚═╝          ┃" -ForegroundColor Green
-Write-Host "   ┃                                            ┃" -ForegroundColor Magenta
-Write-Host "   ┃                                            ┃" -ForegroundColor Magenta
-Write-Host "   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" -ForegroundColor Magenta
+Write-Host "$p$purple┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓$reset"
+Write-Host "$p$purple┃                                            ┃$reset"
+Write-Host "$p$purple┃$reset   $yellow✨  ██████╗ ███╗   ██╗███████╗$reset           $purple┃$reset"
+Write-Host "$p$purple┃$reset      $yellow██╔═══██╗████╗  ██║██╔════╝$reset           $purple┃$reset"
+Write-Host "$p$purple┃$reset      $yellow██║   ██║██╔██╗ ██║█████╗$reset             $purple┃$reset"
+Write-Host "$p$purple┃$reset      $yellow██║   ██║██║╚██╗██║██╔══╝$reset             $purple┃$reset"
+Write-Host "$p$purple┃$reset      $yellow╚██████╔╝██║ ╚████║███████╗$reset           $purple┃$reset"
+Write-Host "$p$purple┃$reset       $yellow╚═════╝ ╚═╝  ╚═══╝╚══════╝$reset           $purple┃$reset"
+Write-Host "$p$purple┃                                            ┃$reset"
+Write-Host "$p$purple┃$reset    $cyan██████╗██╗     ██╗ ██████╗██╗  ██╗$reset      $purple┃$reset"
+Write-Host "$p$purple┃$reset   $cyan██╔════╝██║     ██║██╔════╝██║ ██╔╝$reset      $purple┃$reset"
+Write-Host "$p$purple┃$reset   $cyan██║     ██║     ██║██║     █████╔╝$reset       $purple┃$reset"
+Write-Host "$p$purple┃$reset   $cyan██║     ██║     ██║██║     ██╔═██╗$reset       $purple┃$reset"
+Write-Host "$p$purple┃$reset   $cyan╚██████╗███████╗██║╚██████╗██║  ██╗$reset      $purple┃$reset"
+Write-Host "$p$purple┃$reset    $cyan╚═════╝╚══════╝╚═╝ ╚═════╝╚═╝  ╚═╝$reset      $purple┃$reset"
+Write-Host "$p$purple┃                                            ┃$reset"
+Write-Host "$p$purple┃$reset   $green████████╗███████╗███████╗████████╗$reset  ⚡   $purple┃$reset"
+Write-Host "$p$purple┃$reset   $green╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝$reset       $purple┃$reset"
+Write-Host "$p$purple┃$reset      $green██║   █████╗  ███████╗   ██║$reset          $purple┃$reset"
+Write-Host "$p$purple┃$reset      $green██║   ██╔══╝  ╚════██║   ██║$reset          $purple┃$reset"
+Write-Host "$p$purple┃$reset      $green██║   ███████╗███████║   ██║$reset          $purple┃$reset"
+Write-Host "$p$purple┃$reset      $green╚═╝   ╚══════╝╚══════╝   ╚═╝$reset          $purple┃$reset"
+Write-Host "$p$purple┃                                            ┃$reset"
+Write-Host "$p$purple┃                                            ┃$reset"
+Write-Host "$p$purple┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛$reset"
 Write-Host "`n"
+
 
 
 # Start copilot 
