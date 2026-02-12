@@ -13,7 +13,7 @@ Las siguientes instrucciones sirven para validar que un sitio web haga exactamen
 
 1. Analiza y comprende los requisitos proporcionados por el usuario directamente en el prompt o en un Work Item de Azure DevOps.
    - Solicitar aclaraciones al usuario si la información es ambigua o contradictoria.
-2. Genera una carpeta en la ruta absoluta completa `informes\<NombreInforme>` en la raíz del proyecto para almacenar las capturas de pantalla que tomes durante la prueba.
+2. Genera una carpeta en la ruta absoluta completa `informes\<NombreInforme>` en la raíz del proyecto para que en esta ruta se almacenen las capturas de pantalla que tomes durante las pruebas.
 3. Navegar a la Url de pruebas usando chrome-devtools-mcp.
    - Si no cuentas con la Url de pruebas en el contexto del proyecto `.github\copilot-instructions.md`, Solicitar al usuario la Url de pruebas de la aplicación web bajo prueba.
 4. Valida si es necesario iniciar sesión en la aplicación web bajo prueba.
@@ -25,11 +25,12 @@ Las siguientes instrucciones sirven para validar que un sitio web haga exactamen
    - Se extremadamente estricto en la validación de etiquetas (labels)
    - Si encuentras alguna discrepancia, por mínima que sea, reporta la como defecto.
 7. Evidenciar los defectos encontrados tomando capturas de pantalla.
-   - No tomes capturas de pantalla de los pasos correctos. A menos que el usuario lo solicite explícitamente.
    - Toma captura de pantalla de los defecto identificados, modificando el CSS, y sin modificar el viewport ni hacer zoom.
-   - Guarda las capturas de pantalla en la carpeta del informe de pruebas creada previamente, con nombres descriptivos relacionados al defecto identificado.
    - Luego de tomar la captura de pantalla, elimina las modificaciones del CSS para evitar que las capturas de pantalla siguientes se vean afectadas.
-8. Genera un informe de pruebas siguiendo las instrucciones de tu skill report-generator.
+   - Guarda las capturas de pantalla en la carpeta del informe de pruebas creada previamente en el `informes\<NombreInforme>`, con nombres descriptivos relacionados al defecto identificado.
+   - No tomes capturas de pantalla de los pasos correctos. A menos que el usuario lo solicite explícitamente.
+8. Cierra el navegador al finalizar la ejecución de las pruebas.
+9. Genera un informe de pruebas siguiendo las instrucciones de tu skill report-generator.
 
 ## Instrucciones para ejecución de pruebas de calidad adicionales
 
