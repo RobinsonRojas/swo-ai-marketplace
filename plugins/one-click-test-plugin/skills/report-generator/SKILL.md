@@ -19,6 +19,7 @@ Sigue las siguientes instrucciones cuando te soliciten generar un informe de pru
 2. Genera un informe final en formato HTML utilizando la plantilla proporcionada como ejemplo:
    - **examples/** - (`plantilla_informe.html`) - Plantilla de informe de pruebas en HTML con estilos profesionales.
    - Puedes editar la plantilla para adaptarla a tus necesidades, pero asegúrate de mantener un formato profesional y claro.
+   - Asegúrate de incluir siempre el logoSWO.png del ejemplo.
 3. Valida que las capturas de pantalla estén correctamente referenciadas en el informe.
 4. Guarda el archivo del informe en la ruta absoluta completa `informes\<NombreInforme>\informe_pruebas.html`.
    - Informa al usuario sobre la ubicación del archivo generado.

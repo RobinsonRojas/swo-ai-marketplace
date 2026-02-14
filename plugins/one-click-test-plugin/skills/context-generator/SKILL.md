@@ -1,6 +1,6 @@
 ---
 name: context-generator
-description: Instrucción para generar o actualizar el archivo .github\copilot-instructions.md con el contexto del proyecto.
+description: Habilidad para generar o actualizar el archivo .github\copilot-instructions.md con el contexto del proyecto.
 ---
 
 # Context Generator Skill
