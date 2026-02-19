@@ -6,6 +6,7 @@ description: Habilidad para realizar pruebas manuales en aplicaciones web e inte
 # Web Manual Testing
 
 Sigue las instrucciones detalladas a continuación para realizar pruebas manuales en aplicaciones web e interactuar con aplicativos web para realizar pruebas en general.
+Obtener ruta absoluta actual del proyecto donde te estas ejecutando, Para guardar las capturas de pantalla en la ruta correcta.
 
 ## Instrucciones para ejecución de pruebas de aceptación
 
