@@ -13,7 +13,7 @@
       "name": "one-click-test-plugin",
       "source": "./plugins/one-click-test-plugin",
       "description": "Colección de habilidades para testing",
-      "version": "2.2.3",
+      "version": "2.2.4",
       "author": {
         "name": "Robinson Arley Rojas Novoa",
         "email": "robison.rojas@softwareone.com"

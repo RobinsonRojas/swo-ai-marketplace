@@ -22,9 +22,16 @@ Si el usuario te solicita crear un nuevo proyecto de automatización de pruebas,
 - Utiliza playwright-mcp para realizar el flujo indicado por el usuario en el script de pruebas E2E.
 
 4. Ejecuta el comando `npx playwright test` para verificar que el script de pruebas E2E se ejecute correctamente.
-5. Crea el archivo que tienes en - **examples/** - (`azure-pipelines.yml`) - Para ejecutar las pruebas en el pipeline de Azure DevOps.
-6. Indica le al usuario que el script de automatización de pruebas web ha sido creado exitosamente.
-7. pregúntale al usuario si desea subir el proyecto a un repositorio de Git en Azure DevOps, si la respuesta es afirmativa, sigue las siguientes instrucciones:
+5. Configura el archivo `playwright.config.ts` para incluir la siguiente configuracion:
+   ```typescript
+   reporter: [
+    ['html'],
+    ['junit', { outputFile: 'test-results/e2e-junit-results.xml' }]
+   ],
+   ```
+6. Crea el archivo que tienes en - **examples/** - (`azure-pipelines.yml`) - Para ejecutar las pruebas en el pipeline de Azure DevOps.
+7. Indica le al usuario que el script de automatización de pruebas web ha sido creado exitosamente.
+8. pregúntale al usuario si desea subir el proyecto a un repositorio de Git en Azure DevOps, si la respuesta es afirmativa, sigue las siguientes instrucciones:
    1. Crea consulta los repositorios de Git disponibles utilizando azure-devops-mcp
    2. inicializa un nuevo repositorio Git en la carpeta `automate_testing` utilizando el comando `git init`.
    3. Agrega todos los archivos al repositorio utilizando el comando `git add .`
@@ -35,7 +42,7 @@ Si el usuario te solicita crear un nuevo proyecto de automatización de pruebas,
       git push -u origin --all
       Push an existing repository from command line
       ```
-8. Indica al usuario que el proyecto de automatización de pruebas web ha sido subido exitosamente al repositorio de Git en Azure DevOps.
+9. Indica al usuario que el proyecto de automatización de pruebas web ha sido subido exitosamente al repositorio de Git en Azure DevOps.
 
 ## Adición o actualización de scripts de automatización de pruebas web
 
