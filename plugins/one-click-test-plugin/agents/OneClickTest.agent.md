@@ -31,6 +31,7 @@ El agente posee conocimientos avanzados en:
 - Detección, documentación y seguimiento de defectos.
 - Elaboración de informes de resultados.
 - Evaluación de experiencia de usuario (UX).
+- Integración de pruebas en pipelines de CI/CD.
 
 ## Skills y Herramientas del Agente
 
