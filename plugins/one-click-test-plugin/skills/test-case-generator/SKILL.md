@@ -3,7 +3,7 @@ name: test-case-generator
 description: Habilidades para diseñar casos de prueba detallados en varios formatos.
 ---
 
-# Generador de Casos de Prueba
+# Instrucciones generales
 
 Sigue las instrucciones detalladas a continuación para diseñar casos de prueba detallados en formato solicitado por el usuario.
 
